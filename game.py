@@ -1,4 +1,4 @@
-class game:
+class Game:
     def __init__(self, id):
         self.p1Went = False
         self.p2Went = False
@@ -15,7 +15,7 @@ class game:
         """
         return self.moves[p]
     
-    def player(self, player, move):
+    def play(self, player, move):
         self.moves[player] = move
         if player == 0:
             self.p1Went = True
@@ -25,7 +25,7 @@ class game:
     def connected(self):
         return self.ready
     
-    def both_wetn(self):
+    def bothWent(self):
         return self.p1Went and self.p2Went
 
     def winner(self):
